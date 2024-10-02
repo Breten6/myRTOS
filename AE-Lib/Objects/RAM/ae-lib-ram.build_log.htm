@@ -1,0 +1,73 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.31.0.0
+Copyright (C) 2020 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Eric Praetzel, ECE Dept, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.31.0.0
+Toolchain Path:  C:\Software\Keil_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 6 (build 750)
+Assembler:       Armasm.exe V5.06 update 6 (build 750)
+Linker/Locator:  ArmLink.exe V5.06 update 6 (build 750)
+Library Manager: ArmAr.exe V5.06 update 6 (build 750)
+Hex Converter:   FromElf.exe V5.06 update 6 (build 750)
+CPU DLL:         SARMCM3.DLL V5.31.0.0
+Dialog DLL:      DARMP1.DLL V1.27.0.0
+Target DLL:      UL2CM3.DLL V1.163.4.0
+Dialog DLL:      TARMP1.DLL V1.26.0.0
+ 
+<h2>Project:</h2>
+P:\350lab4\lab4\lab4\AE-Lib\ae-lib.uvprojx
+Project File Date:  07/17/2022
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 6 (build 750)', folder: 'C:\Software\Keil_v5\ARM\ARMCC\Bin'
+*** Note: Rebuilding project, since 'Options->Output->Create Batch File' is selected.
+Rebuild Project 'ae-lib' - Target 'AE Lib RAM'
+compiling ae.c...
+compiling ae_tasks_util.c...
+compiling ae_timer.c...
+compiling ae_util.c...
+compiling main.c...
+compiling ae_tasks2_Gxx.c...
+P:\350lab4\lab4\lab4\AE-Lib\src\ae\ae_tasks2_Gxx.c(189): warning:  #9-D: nested comment is not allowed
+  /*
+P:\350lab4\lab4\lab4\AE-Lib\src\ae\ae_tasks2_Gxx.c(341): warning:  #111-D: statement is unreachable
+      update_exec_seq(test_id, tid);
+P:\350lab4\lab4\lab4\AE-Lib\src\ae\ae_tasks2_Gxx.c(322): warning:  #177-D: variable "p_index"  was declared but never referenced
+      U8      *p_index   = &(g_ae_xtest.index);
+P:\350lab4\lab4\lab4\AE-Lib\src\ae\ae_tasks2_Gxx.c(323): warning:  #177-D: variable "sub_result"  was declared but never referenced
+      int     sub_result = 0;
+P:\350lab4\lab4\lab4\AE-Lib\src\ae\ae_tasks2_Gxx.c(352): warning:  #177-D: variable "ret_val"  was declared but never referenced
+      int ret_val = 10;
+P:\350lab4\lab4\lab4\AE-Lib\src\ae\ae_tasks2_Gxx.c(423): warning:  #177-D: variable "rt_get"  was declared but never referenced
+      TIMEVAL *rt_get;
+P:\350lab4\lab4\lab4\AE-Lib\src\ae\ae_tasks2_Gxx.c(482): warning:  #177-D: variable "ret_val"  was declared but never referenced
+      int ret_val = 10;
+P:\350lab4\lab4\lab4\AE-Lib\src\ae\ae_tasks2_Gxx.c(486): warning:  #177-D: variable "p_index"  was declared but never referenced
+      U8      *p_index   = &(g_ae_xtest.index);
+P:\350lab4\lab4\lab4\AE-Lib\src\ae\ae_tasks2_Gxx.c(487): warning:  #177-D: variable "sub_result"  was declared but never referenced
+      int     sub_result = 0;
+src\ae\ae_tasks2_Gxx.c: 9 warnings, 0 errors
+creating Library...
+".\Objects\RAM\ae-lib-ram.lib" - 0 Error(s), 9 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.LPC1700_DFP.2.7.0.pack
+                Keil.LPC1700_DFP.2.7.0
+                NXP LPC1700 Series Device Support, Drivers and Examples for MCB1700 and LPC1788-32
+
+<h2>Collection of Component include folders:</h2>
+  C:\Software\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.7.0\Device\Include
+
+<h2>Collection of Component Files used:</h2>
+Build Time Elapsed:  00:00:02
+</pre>
+</body>
+</html>

@@ -1,0 +1,7 @@
+--c99 -c --cpu Cortex-M3 -D__EVAL -g -O0 --apcs=interwork --split_sections -I ..\include -I ..\include\bsp\LPC1768 -I .\src\kernel
+-I.\RTE\Device\LPC1768
+-I.\RTE\_RTX_App_RAM
+-IC:\Software\Keil_v5\ARM\PACK\ARM\CMSIS\5.8.0\CMSIS\Core\Include
+-IC:\Software\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.7.0\Device\Include
+-D__UVISION_VERSION="531" -D_RTE_ -DLPC175x_6x -D_RTE_ -DECE350_P4 -DDEBUG_0_ -DDEBUG_1_
+-o .\objects\ram\printf.o --omf_browse .\objects\ram\printf.crf --depend .\objects\ram\printf.d "src\libu\printf.c"

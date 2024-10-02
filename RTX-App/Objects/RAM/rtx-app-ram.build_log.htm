@@ -1,0 +1,256 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.31.0.0
+Copyright (C) 2020 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Eric Praetzel, ECE Dept, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.31.0.0
+Toolchain Path:  C:\Software\Keil_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 6 (build 750)
+Assembler:       Armasm.exe V5.06 update 6 (build 750)
+Linker/Locator:  ArmLink.exe V5.06 update 6 (build 750)
+Library Manager: ArmAr.exe V5.06 update 6 (build 750)
+Hex Converter:   FromElf.exe V5.06 update 6 (build 750)
+CPU DLL:         SARMCM3.DLL V5.31.0.0
+Dialog DLL:      DARMP1.DLL V1.27.0.0
+Target DLL:      UL2CM3.DLL V1.163.4.0
+Dialog DLL:      TARMP1.DLL V1.26.0.0
+ 
+<h2>Project:</h2>
+P:\350lab4\lab4\lab4\RTX-App\rtx-app.uvprojx
+Project File Date:  07/16/2022
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 6 (build 750)', folder: 'C:\Software\Keil_v5\ARM\ARMCC\Bin'
+Build Project 'rtx-app' - Target 'RTX App RAM'
+compiling uart_polling.c...
+compiling timer.c...
+compiling uart_irq.c...
+P:\350lab4\lab4\lab4\RTX-App\src\bsp\LPC1768\uart_irq.c(247): warning:  #177-D: variable "type"  was declared but never referenced
+  					int type = buf_recv[5];
+src\bsp\LPC1768\uart_irq.c: 1 warning, 0 errors
+compiling HAL.c...
+compiling k_mem.c...
+P:\350lab4\lab4\lab4\RTX-App\src\kernel\k_mem.c(342): warning:  #177-D: variable "index"  was declared but never referenced
+  				int index = 0;
+P:\350lab4\lab4\lab4\RTX-App\src\kernel\k_mem.c(391): warning:  #177-D: variable "index"  was declared but never referenced
+  				int index = 0;
+P:\350lab4\lab4\lab4\RTX-App\src\kernel\k_mem.c(431): warning:  #111-D: statement is unreachable
+      return NULL;
+src\kernel\k_mem.c: 3 warnings, 0 errors
+compiling k_msg.c...
+compiling k_rtx_init.c...
+compiling printf.c...
+compiling cdisp_task.c...
+P:\350lab4\lab4\lab4\RTX-App\src\tasks\cdisp_task.c(38): warning:  #177-D: variable "length"  was declared but never referenced
+  						int length = (((char *)buf)[3]<<24)+(((char*)buf)[2]<<16)+(((char*)buf)[1]<<8)+(((char*)buf)[0]);				
+src\tasks\cdisp_task.c: 1 warning, 0 errors
+compiling k_task.c...
+P:\350lab4\lab4\lab4\RTX-App\src\kernel\k_task.c(173): warning:  #940-D: missing return statement at end of non-void function "update_timeout_and_release" 
+  }
+P:\350lab4\lab4\lab4\RTX-App\src\kernel\k_task.c(216): warning:  #68-D: integer conversion resulted in a change of sign
+  	return -1;
+P:\350lab4\lab4\lab4\RTX-App\src\kernel\k_task.c(734): warning:  #940-D: missing return statement at end of non-void function "k_tsk_set_prio" 
+  }
+P:\350lab4\lab4\lab4\RTX-App\src\kernel\k_task.c(749): warning:  #186-D: pointless comparison of unsigned integer with zero
+  		if (tid>=MAX_TASKS||tid<0){
+P:\350lab4\lab4\lab4\RTX-App\src\kernel\k_task.c(834): warning:  #177-D: variable "count"  was declared but never referenced
+  	int count = timer1_tik-gp_current_task->release_time;
+src\kernel\k_task.c: 5 warnings, 0 errors
+compiling kcd_task.c...
+P:\350lab4\lab4\lab4\RTX-App\src\tasks\kcd_task.c(102): warning:  #177-D: variable "type"  was declared but never referenced
+          int type= ((char*)buf)[5];
+P:\350lab4\lab4\lab4\RTX-App\src\tasks\kcd_task.c(103): warning:  #177-D: variable "sender_id"  was declared but never referenced
+          int sender_id = ((char*)buf)[4];
+P:\350lab4\lab4\lab4\RTX-App\src\tasks\kcd_task.c(104): warning:  #177-D: variable "get_char"  was declared but never referenced
+          int get_char = ((char*)buf)[6];
+P:\350lab4\lab4\lab4\RTX-App\src\tasks\kcd_task.c(370): warning:  #1-D: last line of file ends without a newline
+                                             
+src\tasks\kcd_task.c: 4 warnings, 0 errors
+compiling null_task.c...
+assembling startup_LPC17xx.s...
+compiling system_LPC17xx.c...
+compiling wall_clock_task.c...
+P:\350lab4\lab4\lab4\RTX-App\src\tasks\wall_clock_task.c(41): warning:  #177-D: variable "pUart"  was declared but never referenced
+          LPC_UART_TypeDef *pUart = (LPC_UART_TypeDef*) LPC_UART0;
+P:\350lab4\lab4\lab4\RTX-App\src\tasks\wall_clock_task.c(174): warning:  #111-D: statement is unreachable
+  		       k_mpool_dealloc(MPID_IRAM2, buf);
+P:\350lab4\lab4\lab4\RTX-App\src\tasks\wall_clock_task.c(33): warning:  #177-D: variable "add_flag"  was declared but never referenced
+  		int add_flag = 0;
+src\tasks\wall_clock_task.c: 3 warnings, 0 errors
+linking...
+.\Objects\RAM\rtx-app-ram.axf: Error: L6406E: No space in execution regions with .ANY selector matching startup_lpc17xx.o(STACK).
+.\Objects\RAM\rtx-app-ram.axf: Error: L6406E: No space in execution regions with .ANY selector matching uart_irq.o(.bss).
+.\Objects\RAM\rtx-app-ram.axf: Error: L6406E: No space in execution regions with .ANY selector matching k_task.o(i.k_tsk_exit).
+.\Objects\RAM\rtx-app-ram.axf: Error: L6406E: No space in execution regions with .ANY selector matching k_task.o(i.scheduler).
+.\Objects\RAM\rtx-app-ram.axf: Error: L6406E: No space in execution regions with .ANY selector matching cdisp_task.o(i.task_cdisp).
+.\Objects\RAM\rtx-app-ram.axf: Error: L6406E: No space in execution regions with .ANY selector matching uart_irq.o(.data).
+.\Objects\RAM\rtx-app-ram.axf: Error: L6406E: No space in execution regions with .ANY selector matching k_task.o(i.k_tsk_get).
+.\Objects\RAM\rtx-app-ram.axf: Error: L6406E: No space in execution regions with .ANY selector matching k_task.o(i.k_tsk_run_new).
+.\Objects\RAM\rtx-app-ram.axf: Error: L6406E: No space in execution regions with .ANY selector matching timer.o(i.timer_irq_init).
+.\Objects\RAM\rtx-app-ram.axf: Error: L6406E: No space in execution regions with .ANY selector matching k_task.o(i.get_earliest_tid).
+.\Objects\RAM\rtx-app-ram.axf: Error: L6406E: No space in execution regions with .ANY selector matching k_task.o(i.k_rt_tsk_get).
+.\Objects\RAM\rtx-app-ram.axf: Error: L6406E: No space in execution regions with .ANY selector matching kcd_task.o(i.deQueue).
+.\Objects\RAM\rtx-app-ram.axf: Error: L6406E: No space in execution regions with .ANY selector matching ae_tasks2_gxx.o(i.init_ae_tsk_test).
+.\Objects\RAM\rtx-app-ram.axf: Error: L6406E: No space in execution regions with .ANY selector matching k_mem.o(i.idx_to_ptr).
+.\Objects\RAM\rtx-app-ram.axf: Error: L6406E: No space in execution regions with .ANY selector matching k_msg.o(i.get_msg_size).
+.\Objects\RAM\rtx-app-ram.axf: Error: L6406E: No space in execution regions with .ANY selector matching ae_util.o(i.print_log).
+.\Objects\RAM\rtx-app-ram.axf: Error: L6406E: No space in execution regions with .ANY selector matching uart_polling.o(i.uart_init).
+.\Objects\RAM\rtx-app-ram.axf: Error: L6406E: No space in execution regions with .ANY selector matching ae_util.o(i.test_abort).
+.\Objects\RAM\rtx-app-ram.axf: Error: L6406E: No space in execution regions with .ANY selector matching main.o(i.main).
+.\Objects\RAM\rtx-app-ram.axf: Error: L6406E: No space in execution regions with .ANY selector matching rt_memcpy_w.o(.text).
+.\Objects\RAM\rtx-app-ram.axf: Error: L6406E: No space in execution regions with .ANY selector matching libspace.o(.bss).
+.\Objects\RAM\rtx-app-ram.axf: Error: L6406E: No space in execution regions with .ANY selector matching k_msg.o(i.get_waiting_highest).
+.\Objects\RAM\rtx-app-ram.axf: Error: L6406E: No space in execution regions with .ANY selector matching k_task.o(i.k_tsk_yield).
+.\Objects\RAM\rtx-app-ram.axf: Error: L6406E: No space in execution regions with .ANY selector matching k_msg.o(i.read_rb).
+.\Objects\RAM\rtx-app-ram.axf: Error: L6406E: No space in execution regions with .ANY selector matching k_msg.o(i.write_rb).
+.\Objects\RAM\rtx-app-ram.axf: Error: L6406E: No space in execution regions with .ANY selector matching timer.o(i.TIMER0_IRQHandler).
+.\Objects\RAM\rtx-app-ram.axf: Error: L6406E: No space in execution regions with .ANY selector matching k_mem.o(i.adr_to_ba_idx).
+.\Objects\RAM\rtx-app-ram.axf: Error: L6406E: No space in execution regions with .ANY selector matching printf.o(i.ui2a).
+.\Objects\RAM\rtx-app-ram.axf: Error: L6406E: No space in execution regions with .ANY selector matching k_msg.o(i.k_mbx_ls).
+.\Objects\RAM\rtx-app-ram.axf: Error: L6406E: No space in execution regions with .ANY selector matching k_msg.o(i.k_send_to_uart).
+.\Objects\RAM\rtx-app-ram.axf: Error: L6406E: No space in execution regions with .ANY selector matching k_rtx_init.o(i.k_rtx_init).
+.\Objects\RAM\rtx-app-ram.axf: Error: L6406E: No space in execution regions with .ANY selector matching kcd_task.o(i.inQueue).
+.\Objects\RAM\rtx-app-ram.axf: Error: L6406E: No space in execution regions with .ANY selector matching printf.o(i.putchw).
+.\Objects\RAM\rtx-app-ram.axf: Error: L6406E: No space in execution regions with .ANY selector matching k_task.o(i.k_tsk_ls).
+.\Objects\RAM\rtx-app-ram.axf: Error: L6406E: No space in execution regions with .ANY selector matching rt_memclr_w.o(.text).
+.\Objects\RAM\rtx-app-ram.axf: Error: L6406E: No space in execution regions with .ANY selector matching ae_tasks2_gxx.o(i.gen_req0).
+.\Objects\RAM\rtx-app-ram.axf: Error: L6406E: No space in execution regions with .ANY selector matching sys_stackheap_outer.o(.text).
+.\Objects\RAM\rtx-app-ram.axf: Error: L6406E: No space in execution regions with .ANY selector matching timer.o(i.get_tick).
+.\Objects\RAM\rtx-app-ram.axf: Error: L6406E: No space in execution regions with .ANY selector matching k_mem.o(i.get_root_idx).
+.\Objects\RAM\rtx-app-ram.axf: Error: L6406E: No space in execution regions with .ANY selector matching ae_tasks2_gxx.o(.conststring).
+.\Objects\RAM\rtx-app-ram.axf: Error: L6406E: No space in execution regions with .ANY selector matching uart_polling.o(i.putc).
+.\Objects\RAM\rtx-app-ram.axf: Error: L6406E: No space in execution regions with .ANY selector matching ae_tasks2_gxx.o(i.set_ae_tasks).
+.\Objects\RAM\rtx-app-ram.axf: Error: L6406E: No space in execution regions with .ANY selector matching ae_tasks2_gxx.o(i.update_exec_seq).
+.\Objects\RAM\rtx-app-ram.axf: Error: L6406E: No space in execution regions with .ANY selector matching k_mem.o(i.k_mem_init).
+.\Objects\RAM\rtx-app-ram.axf: Error: L6406E: No space in execution regions with .ANY selector matching null_task.o(i.task_null).
+.\Objects\RAM\rtx-app-ram.axf: Error: L6406E: No space in execution regions with .ANY selector matching k_msg.o(i.k_mbx_get).
+.\Objects\RAM\rtx-app-ram.axf: Error: L6406E: No space in execution regions with .ANY selector matching startup_lpc17xx.o(.text).
+.\Objects\RAM\rtx-app-ram.axf: Error: L6406E: No space in execution regions with .ANY selector matching printf.o(i.a2i).
+.\Objects\RAM\rtx-app-ram.axf: Error: L6406E: No space in execution regions with .ANY selector matching k_mem.o(i.get_bit_idx).
+.\Objects\RAM\rtx-app-ram.axf: Error: L6406E: No space in execution regions with .ANY selector matching ae_util.o(i.process_sub_result).
+.\Objects\RAM\rtx-app-ram.axf: Error: L6406E: No space in execution regions with .ANY selector matching uart_polling.o(i.uart_put_char).
+.\Objects\RAM\rtx-app-ram.axf: Error: L6406E: No space in execution regions with .ANY selector matching k_task.o(.emb_text).
+.\Objects\RAM\rtx-app-ram.axf: Error: L6406E: No space in execution regions with .ANY selector matching printf.o(i.a2d).
+.\Objects\RAM\rtx-app-ram.axf: Error: L6406E: No space in execution regions with .ANY selector matching k_mem.o(i.bitmap_xor_and_test).
+.\Objects\RAM\rtx-app-ram.axf: Error: L6406E: No space in execution regions with .ANY selector matching k_msg.o(i.k_recv_uart).
+.\Objects\RAM\rtx-app-ram.axf: Error: L6406E: No space in execution regions with .ANY selector matching ae.o(i.ae_init).
+.\Objects\RAM\rtx-app-ram.axf: Error: L6406E: No space in execution regions with .ANY selector matching ae_util.o(i.HardFault_Handler).
+.\Objects\RAM\rtx-app-ram.axf: Error: L6406E: No space in execution regions with .ANY selector matching k_msg.o(i.free_rb).
+.\Objects\RAM\rtx-app-ram.axf: Error: L6406E: No space in execution regions with .ANY selector matching k_mem.o(i.get_buddy_index).
+.\Objects\RAM\rtx-app-ram.axf: Error: L6406E: No space in execution regions with .ANY selector matching k_mem.o(i.get_log_2_up).
+.\Objects\RAM\rtx-app-ram.axf: Error: L6406E: No space in execution regions with .ANY selector matching k_mem.o(i.k_alloc_k_stack).
+.\Objects\RAM\rtx-app-ram.axf: Error: L6406E: No space in execution regions with .ANY selector matching k_mem.o(i.k_alloc_p_stack).
+.\Objects\RAM\rtx-app-ram.axf: Error: L6406E: No space in execution regions with .ANY selector matching k_mem.o(i.ptr_to_pidx).
+.\Objects\RAM\rtx-app-ram.axf: Error: L6406E: No space in execution regions with .ANY selector matching printf.o(i.tfp_printf).
+.\Objects\RAM\rtx-app-ram.axf: Error: L6406E: No space in execution regions with .ANY selector matching printf.o(i.tfp_sprintf).
+.\Objects\RAM\rtx-app-ram.axf: Error: L6406E: No space in execution regions with .ANY selector matching ae_util.o(i.print_summary).
+.\Objects\RAM\rtx-app-ram.axf: Error: L6406E: No space in execution regions with .ANY selector matching uart_irq.o(i.__NVIC_SetPriority).
+.\Objects\RAM\rtx-app-ram.axf: Error: L6406E: No space in execution regions with .ANY selector matching uart_polling.o(i.uart_put_string).
+.\Objects\RAM\rtx-app-ram.axf: Error: L6406E: No space in execution regions with .ANY selector matching k_mem.o(i.bitmap_scan_test).
+.\Objects\RAM\rtx-app-ram.axf: Error: L6406E: No space in execution regions with .ANY selector matching k_rtx_init.o(i.k_pre_rtx_init).
+.\Objects\RAM\rtx-app-ram.axf: Error: L6406E: No space in execution regions with .ANY selector matching k_task.o(i.get_valid_tid).
+.\Objects\RAM\rtx-app-ram.axf: Error: L6406E: No space in execution regions with .ANY selector matching ae_util.o(i.test_exit).
+.\Objects\RAM\rtx-app-ram.axf: Error: L6406E: No space in execution regions with .ANY selector matching uart_irq.o(i.__NVIC_EnableIRQ).
+.\Objects\RAM\rtx-app-ram.axf: Error: L6406E: No space in execution regions with .ANY selector matching ae_tasks2_gxx.o(.constdata).
+.\Objects\RAM\rtx-app-ram.axf: Error: L6406E: No space in execution regions with .ANY selector matching printf.o(i.i2a).
+.\Objects\RAM\rtx-app-ram.axf: Error: L6406E: No space in execution regions with .ANY selector matching ae_util.o(i.strcpy).
+.\Objects\RAM\rtx-app-ram.axf: Error: L6406E: No space in execution regions with .ANY selector matching k_task.o(i.check_rtt_ready_empty).
+.\Objects\RAM\rtx-app-ram.axf: Error: L6406E: No space in execution regions with .ANY selector matching k_task.o(i.k_tsk_init_dsp).
+.\Objects\RAM\rtx-app-ram.axf: Error: L6406E: No space in execution regions with .ANY selector matching k_task.o(i.k_tsk_init_first).
+.\Objects\RAM\rtx-app-ram.axf: Error: L6406E: No space in execution regions with .ANY selector matching k_task.o(i.k_tsk_init_kcd).
+.\Objects\RAM\rtx-app-ram.axf: Error: L6406E: No space in execution regions with .ANY selector matching k_task.o(i.k_tsk_init_wct).
+.\Objects\RAM\rtx-app-ram.axf: Error: L6406E: No space in execution regions with .ANY selector matching k_task.o(i.q_delete_first_node).
+.\Objects\RAM\rtx-app-ram.axf: Error: L6406E: No space in execution regions with .ANY selector matching kcd_task.o(i.init).
+.\Objects\RAM\rtx-app-ram.axf: Error: L6406E: No space in execution regions with .ANY selector matching ae_tasks2_gxx.o(i.set_ae_init_tasks).
+.\Objects\RAM\rtx-app-ram.axf: Error: L6406E: No space in execution regions with .ANY selector matching k_msg.o(i.cpymem).
+.\Objects\RAM\rtx-app-ram.axf: Error: L6406E: No space in execution regions with .ANY selector matching kcd_task.o(i.NewNode).
+.\Objects\RAM\rtx-app-ram.axf: Error: L6406E: No space in execution regions with .ANY selector matching ae_tasks2_gxx.o(i.update_ae_xtest).
+.\Objects\RAM\rtx-app-ram.axf: Error: L6406E: No space in execution regions with .ANY selector matching wall_clock_task.o(i.get_hour).
+.\Objects\RAM\rtx-app-ram.axf: Error: L6406E: No space in execution regions with .ANY selector matching ae.o(i.ae_set_init_tasks_info).
+.\Objects\RAM\rtx-app-ram.axf: Error: L6406E: No space in execution regions with .ANY selector matching ae.o(i.ae_set_sys_info).
+.\Objects\RAM\rtx-app-ram.axf: Error: L6406E: No space in execution regions with .ANY selector matching k_mem.o(i.delete_node).
+.\Objects\RAM\rtx-app-ram.axf: Error: L6406E: No space in execution regions with .ANY selector matching k_task.o(i.q_delete_node).
+.\Objects\RAM\rtx-app-ram.axf: Error: L6406E: No space in execution regions with .ANY selector matching printf.o(i.init_printf).
+.\Objects\RAM\rtx-app-ram.axf: Error: L6406E: No space in execution regions with .ANY selector matching wall_clock_task.o(i.get_min).
+.\Objects\RAM\rtx-app-ram.axf: Error: L6406E: No space in execution regions with .ANY selector matching k_msg.o(i.check_rb_empty).
+.\Objects\RAM\rtx-app-ram.axf: Error: L6406E: No space in execution regions with .ANY selector matching exit.o(.text).
+.\Objects\RAM\rtx-app-ram.axf: Error: L6406E: No space in execution regions with .ANY selector matching ae_util.o(i.count_set_bits).
+.\Objects\RAM\rtx-app-ram.axf: Error: L6406E: No space in execution regions with .ANY selector matching k_mem.o(i.get_log_2_down).
+.\Objects\RAM\rtx-app-ram.axf: Error: L6406E: No space in execution regions with .ANY selector matching k_mem.o(i.list_first_entry_or_null).
+.\Objects\RAM\rtx-app-ram.axf: Error: L6406E: No space in execution regions with .ANY selector matching k_task.o(i.q_list_first_entry_or_null).
+.\Objects\RAM\rtx-app-ram.axf: Error: L6406E: No space in execution regions with .ANY selector matching kcd_task.o(.data).
+.\Objects\RAM\rtx-app-ram.axf: Error: L6406E: No space in execution regions with .ANY selector matching main.o(.data).
+.\Objects\RAM\rtx-app-ram.axf: Error: L6406E: No space in execution regions with .ANY selector matching k_msg.o(i.get_rb_free_size).
+.\Objects\RAM\rtx-app-ram.axf: Error: L6406E: No space in execution regions with .ANY selector matching k_msg.o(i.init_rb).
+.\Objects\RAM\rtx-app-ram.axf: Error: L6406E: No space in execution regions with .ANY selector matching wall_clock_task.o(i.get_sec).
+.\Objects\RAM\rtx-app-ram.axf: Error: L6406E: No space in execution regions with .ANY selector matching k_mem.o(.data).
+.\Objects\RAM\rtx-app-ram.axf: Error: L6406E: No space in execution regions with .ANY selector matching k_task.o(i.k_tsk_gettid).
+.\Objects\RAM\rtx-app-ram.axf: Error: L6406E: No space in execution regions with .ANY selector matching k_task.o(.data).
+.\Objects\RAM\rtx-app-ram.axf: Error: L6406E: No space in execution regions with .ANY selector matching sys_exit.o(.text).
+.\Objects\RAM\rtx-app-ram.axf: Error: L6406E: No space in execution regions with .ANY selector matching k_mem.o(i.add_to_list).
+.\Objects\RAM\rtx-app-ram.axf: Error: L6406E: No space in execution regions with .ANY selector matching k_task.o(i.q_add_to_list_head).
+.\Objects\RAM\rtx-app-ram.axf: Error: L6406E: No space in execution regions with .ANY selector matching k_task.o(i.q_add_to_list_last).
+.\Objects\RAM\rtx-app-ram.axf: Error: L6406E: No space in execution regions with .ANY selector matching printf.o(i.putcp).
+.\Objects\RAM\rtx-app-ram.axf: Error: L6406E: No space in execution regions with .ANY selector matching hal.o(.emb_text).
+.\Objects\RAM\rtx-app-ram.axf: Error: L6406E: No space in execution regions with .ANY selector matching k_mem.o(i.get_mpool_size).
+.\Objects\RAM\rtx-app-ram.axf: Error: L6406E: No space in execution regions with .ANY selector matching printf.o(.data).
+.\Objects\RAM\rtx-app-ram.axf: Error: L6406E: No space in execution regions with .ANY selector matching __rtentry2.o(.ARM.Collect$$rtentry$$0000000D).
+.\Objects\RAM\rtx-app-ram.axf: Error: L6406E: No space in execution regions with .ANY selector matching libspace.o(.text).
+.\Objects\RAM\rtx-app-ram.axf: Error: L6406E: No space in execution regions with .ANY selector matching k_mem.o(i.init_list_head).
+.\Objects\RAM\rtx-app-ram.axf: Error: L6406E: No space in execution regions with .ANY selector matching k_task.o(i.__q_delete_node).
+.\Objects\RAM\rtx-app-ram.axf: Error: L6406E: No space in execution regions with .ANY selector matching k_task.o(i.q_init_list_head).
+.\Objects\RAM\rtx-app-ram.axf: Error: L6406E: No space in execution regions with .ANY selector matching heapauxi.o(.text).
+.\Objects\RAM\rtx-app-ram.axf: Error: L6406E: No space in execution regions with .ANY selector matching rtexit2.o(.ARM.Collect$$rtexit$$00000004).
+.\Objects\RAM\rtx-app-ram.axf: Error: L6406E: No space in execution regions with .ANY selector matching timer.o(.data).
+.\Objects\RAM\rtx-app-ram.axf: Error: L6406E: No space in execution regions with .ANY selector matching k_rtx_init.o(.data).
+.\Objects\RAM\rtx-app-ram.axf: Error: L6406E: No space in execution regions with .ANY selector matching ae.o(i.ae_exit).
+.\Objects\RAM\rtx-app-ram.axf: Error: L6406E: No space in execution regions with .ANY selector matching libinit.o(.ARM.Collect$$libinit$$00000000).
+.\Objects\RAM\rtx-app-ram.axf: Error: L6406E: No space in execution regions with .ANY selector matching use_no_semi.o(.text).
+.\Objects\RAM\rtx-app-ram.axf: Error: L6406E: No space in execution regions with .ANY selector matching libshutdown.o(.ARM.Collect$$libshutdown$$00000000).
+.\Objects\RAM\rtx-app-ram.axf: Error: L6406E: No space in execution regions with .ANY selector matching startup_lpc17xx.o(HEAP).
+.\Objects\RAM\rtx-app-ram.axf: Error: L6406E: No space in execution regions with .ANY selector matching indicate_semi.o(.text).
+.\Objects\RAM\rtx-app-ram.axf: Error: L6407E: Sections of aggregate size 0x1c40 bytes could not fit into .ANY selector(s).
+Not enough information to list image symbols.
+Not enough information to list load addresses in the image map.
+Finished: 2 information, 0 warning and 132 error messages.
+".\Objects\RAM\rtx-app-ram.axf" - 132 Error(s), 17 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.8.0.pack
+                ARM.CMSIS.5.8.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.5.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.LPC1700_DFP.2.7.0.pack
+                Keil.LPC1700_DFP.2.7.0
+                NXP LPC1700 Series Device Support, Drivers and Examples for MCB1700 and LPC1788-32
+   * Component: Startup Version: 1.0.0
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\Device\LPC1768
+  .\RTE\_RTX_App_RAM
+  C:\Software\Keil_v5\ARM\PACK\ARM\CMSIS\5.8.0\CMSIS\Core\Include
+  C:\Software\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.7.0\Device\Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.5.0
+
+   * Component: Keil::Device:Startup:1.0.0
+      Include file:  Device\Include\LPC17xx.h
+      Include file:  RTE_Driver\Config\RTE_Device.h
+      Source file:   Device\Source\system_LPC17xx.c
+      Source file:   Device\Source\ARM\startup_LPC17xx.s
+Target not created.
+Build Time Elapsed:  00:00:05
+</pre>
+</body>
+</html>
